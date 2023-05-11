@@ -3,8 +3,8 @@ class plane_vol(models.Model):
         _name = 'plane.vol'
         codi = fields.Integer('Codi de vol')
         passatgers = fields.Integer('Número de passatgers')
-        dataSortida = fields.Date('Data de sortida')
-        dataArribada = fields.Date('Data d''arribada')
+        dataSortida = fields.DateTime('Data de sortida')
+        dataArribada = fields.DateTime('Data d''arribada')
 
 
 
