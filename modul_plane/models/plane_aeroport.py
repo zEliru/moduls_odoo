@@ -3,7 +3,7 @@ class plane_aeroport(models.Model):
         _name = 'plane.aeroport'
         codi = fields.Integer('Codi')
         nom = fields.Char('Nom de l''aeroport')
-        imatge = fields.Char('Imatge')
+        imatge = fields.Char('Imatge') #char o binary o imatge?? idk
         ciutat = fields.Char('Ciutat')
         pais = fields.Char('Païs')
         latitud = fields.Float('Coord 1')
