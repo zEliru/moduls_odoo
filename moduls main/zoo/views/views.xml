@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="action_zoo_animal_tree"> 
+            <field name="name">Animal</field>
+            <field name="res_model">zoo.animal</field>
+        </record>
+
+	<record model="ir.actions.act_window" id="action_zoo_especie_tree"> 
+            <field name="name">Especie</field>
+            <field name="res_model">zoo.especie</field>
+        </record>
+
+	 
+        <record model="ir.actions.act_window" id="action_zoo_zoo_tree">
+            <field name="name">Zuu</field>
+            <field name="res_model">zoo.zoo</field>
+        </record>
+
+
+	<menuitem name="Zoo" id="zoo_menu_1" />
+	<menuitem name="Animal" parent="zoo_menu_1" id="zoo_menu_1_1" action="action_zoo_animal_tree" />	
+	<menuitem name="Espècie" parent="zoo_menu_1" id="zoo_menu_1_2" action="action_zoo_especie_tree" />	
+	<menuitem name="Zoo" parent="zoo_menu_1" id="zoo_menu_1_3" action="action_zoo_zoo_tree" />	
+
+        <record model="ir.ui.view" id="view_zoo_animal_tree">
+            <field name="name">zoo_animal</field>
+            <field name="model">zoo.animal</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Animal">
+                    <field name="continentorigen"/>
+                    <field name="datanaix"/>
+                    <field name="paisorigen"/>
+                    <field name="sexe"/>	
+                    <field name="especie_id"/>			
+                </tree>
+            </field>
+	    </record>
+	
+        
+       
+        <record model="ir.ui.view" id="view_zoo_especie_tree">
+            <field name="name">zoo_especie</field>
+            <field name="model">zoo.especie</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Especie">
+                    <field name="familia"/>
+                    <field name="nomcientific"/>
+                    <field name="nomvulgar"/>
+                    <field name="perill"/>					
+                </tree>
+            </field>
+	    </record>
+       
+        <record model="ir.ui.view" id="view_zoo_zoo_tree">
+            <field name="name">zoo_zoo</field>
+            <field name="model">zoo.zoo</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Zoo">
+                    <field name="grandaria"/>
+                    <field name="nom"/>
+                    <field name="ciutat"/>
+                    <field name="pais"/>							
+                </tree>
+            </field>
+	    </record>
+        <!-- zoo animal form -->
+        <record model="ir.ui.view" id="view_zoo_animal_form">
+            <field name="name">view_zoo_animal_form </field>
+            <field name="model">zoo.animal</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Animal Form">
+                    <sheet>
+                        <group col="12" string="Dades animal spawn">
+                            <group colspan="6">
+                                <field name="continentorigen"/>
+                                <field name="paisorigen"/>
+                            </group>
+                            <group colspan="6">
+                                <field name="datanaix"/>
+                                <field name="sexe"/>
+                            </group>
+                        </group>
+                        <group col="12" string="Especie animal i Zoo">
+                            <group colspn="12">
+                                <field name="especie_id"/>
+                                <field name="zoo_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record> 
+
+         <!-- zoo especie  form -->
+        <record model="ir.ui.view" id="view_zoo_especie_form">
+            <field name="name">view_zoo_especie_form </field>
+            <field name="model">zoo.especie</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Espècie Form">
+                    <sheet>
+                        <group col="12" string="Dades Espècie">
+                            <group colspan="6">
+                                <field name="nomvulgar"/>
+                                <field name="nomcientific"/>
+                            </group>
+                            <group colspan="6">
+                                <field name="familia"/>
+                                <field name="perill"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>   		
+
+         <!-- zoo zoo  form -->
+        <record model="ir.ui.view" id="view_zoo_zoo_form">
+            <field name="name">view_zoo_zoo_form </field>
+            <field name="model">zoo.zoo</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Zoo Form">
+                    <sheet>
+                        <group col="12" string="Dades Zoo">
+                            <group colspan="6">
+                                <field name="nom"/>
+                                <field name="grandaria"/>
+                            </group>
+                            <group colspan="6">
+                                <field name="pais"/>
+                                <field name="ciutat"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>   
+         grandaria = fields.Float('Grandària')
+    nom = fields.Char('Nom')
+    ciutat = fields.Char('Nom de la ciutat')
+    pais = fields.Char('Pais')		
+
+        
+    </data>
+</odoo>
