@@ -8,6 +8,7 @@ class plane_pilot(models.Model):
         nif = fields.Char('NIF')
         telf = fields.Char('Telèfon')
         email = fields.Char('Email')
+        vol_ids = fields.One2many('plane.vol','pilot_id',string='vols')
 
         def _get_name(self):
                 for record in self:

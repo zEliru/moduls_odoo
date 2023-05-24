@@ -6,6 +6,7 @@ class zoo_especie(models.Model):
     nomcientific = fields.Char('Nom científic')
     nomvulgar = fields.Char('Nom vulgar')
     perill = fields.Char('Perill')
+    animal_ids = fields.One2many('zoo.animal','especie_id', string='Animal IDs')
 
     def _get_name(self):
         for record in self:

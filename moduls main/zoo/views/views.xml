@@ -113,6 +113,10 @@
                                 <field name="familia"/>
                                 <field name="perill"/>
                             </group>
+                        
+                        </group>
+                        <group col="12" string="Animals d'aquesta espècie">
+                            <field name="animal_ids"/>
                         </group>
                     </sheet>
                 </form>
@@ -137,14 +141,13 @@
                                 <field name="ciutat"/>
                             </group>
                         </group>
+                        <group col="12" string="Animals del Zoo">
+                            <field name="animal_ids"/>
+                        </group>
                     </sheet>
                 </form>
             </field>
-        </record>   
-         grandaria = fields.Float('Grandària')
-    nom = fields.Char('Nom')
-    ciutat = fields.Char('Nom de la ciutat')
-    pais = fields.Char('Pais')		
+        </record>   	
 
         
     </data>

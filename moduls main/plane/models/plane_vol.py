@@ -8,7 +8,7 @@ class plane_vol(models.Model):
         dataArribada = fields.Datetime('Data d''arribada')
         aeroport_id = fields.Many2one('plane.aeroport','Aeroport sortida')
         aeroport_id_2 = fields.Many2one('plane.aeroport','Aeroport arribada')
-        pilot_id = fields.Many2one('plane.pilot','Pilot')
+        pilot_id = fields.Many2one('plane.pilot',string='Pilot')
         plane_id = fields.Many2one('plane.avio','Avió')
 
         def _get_name(self):

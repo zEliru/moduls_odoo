@@ -130,10 +130,14 @@
                             <group colspan="6">
                                 <field name="model"/>
                                 <field name="maxVel"/> 
+                                
                             </group>
                         </group>                       
-                        <group colspn="12">
+                        <group colspan="12">
                                 <field name="imatge" widget="image" />
+                        </group>
+                        <group colspan="12">
+                            <field name="vol_ids"/>
                         </group>
                         
                     </sheet>
@@ -167,9 +171,16 @@
                             <group colspan="12">
                                 <field name="imatge" widget="image" />
                             </group>
-                        </group>                       
-                       
-                        
+                        </group>
+                        <group col="12" string="SORTIDA"> 
+                            <field name="vol_ids"/>
+                            
+                        </group>       
+                         <group col="12" string="ARRIBADA"> 
+                            
+                           <field name="vol_ids_2"/>
+                        </group>     
+                                                      
                     </sheet>
                 </form>
             </field>
@@ -195,6 +206,9 @@
                              <group colspan="4">
                                 <field name="telf"/>
                                 <field name="email"/>
+                            </group>
+                            <group col="12" string="Vols">
+                                <field name="vol_ids"/>
                             </group>
                         </group>   
                     </sheet>
